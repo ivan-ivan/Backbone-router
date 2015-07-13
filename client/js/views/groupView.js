@@ -12,11 +12,6 @@ var GroupView = Backbone.View.extend({
 				console.log(options);
 			}
 		});
-		// console.log(eventAggregator);
-		// this.eventAggregator.trigger('collection:passed', this.collection);
-		// setTimeout(function () {
-		// 	console.log(this.collection.models);
-		// }.bind(this), 40);
 	},
 
 	render: function () {
@@ -27,6 +22,6 @@ var GroupView = Backbone.View.extend({
 			});
 			self.$el.append(studentView.render().el);
 		});
-		$('.container').html(this.$el);
+		$('.container').append(this.$el);
 	}
 });

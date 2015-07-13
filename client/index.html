@@ -11,6 +11,16 @@
 	<script id='studentTpl' type='text/template'>
 		<%= name %>
 	</script>
+	<script id='formTpl' type='text/template'>
+		<button class='btn'>Add a person</button>
+		<form>
+			<label><input type="text" name='name'>Name</label><br>
+			<label><input type="text" name='lastName'>Lastname</label><br>
+			<label><input type="text" name='age'>Age</label><br>
+			<label><input type="text" name='gender'>Gender</label><br>
+			<input type="button" value="Add">
+		</form>
+	</script>
 	<script src="js/lib/jquery/dist/jquery.js"></script>
 	<script src="js/lib/underscore/underscore.js"></script>
 	<script src="js/lib/backbone/backbone.js"></script>
@@ -19,6 +29,7 @@
 	<script src="js/views/studentView.js"></script>
 	<script src="js/views/groupView.js"></script>
 	<script src="js/views/routerView.js"></script>
+	<script src="js/views/formView.js"></script>
 	<script src="js/controllers/groupController.js"></script>
 	<script src="js/routers/router.js"></script>
 	<script src="js/main.js"></script>

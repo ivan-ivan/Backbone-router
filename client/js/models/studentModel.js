@@ -4,5 +4,7 @@ var StudentModel = Backbone.Model.extend({
 		lastName: 'Peterson',
 		age: 22,
 		gender: 'male'
-	}
+	},
+
+	urlRoot: '/students.json'
 });

@@ -5,3 +5,23 @@ ul {
 .container {
 	margin-top: 80px;
 }
+
+input[type='text'] {
+	margin-right: 15px;
+}
+
+form {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+.form {
+	margin-bottom: 25px;
+}
+
+.btn {
+	margin-bottom: 15px; 
+}
