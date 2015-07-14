@@ -25,16 +25,14 @@ var FormView = Backbone.View.extend({
 				console.log('ura!');
 			},
 			error: function () {
-				console.log('shit!');
+				console.log('error!');
 			}
 		});
-		console.dir(newPerson);
-		$('form').slideToggle(800);//nice feature, but may be deleted
+		// console.dir(newPerson);
+		$('form').slideToggle(800); 
 	},
 
 	initialize: function () {
-		// this.collection = new StudentsCollection();
-		// this.collection.save();
 		this.render();
 	},
 

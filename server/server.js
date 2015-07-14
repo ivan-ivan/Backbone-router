@@ -26,7 +26,7 @@ server.post('/students.json', function (req, res) {
             var encodedObj = data.toString('utf8'), //encoding what's inside of .json into human symbols
                 parsedObj = JSON.parse(encodedObj);
             parsedObj.push(JSON.parse(bodyStr)); //adding newly created parsed obj into array 
-
+            // console.log(bodyStr);
             fs.writeFile('students.json', JSON.stringify(parsedObj), function (err) { //rewriting file with new array
                 if (err) {
                     console.log(err);
@@ -37,7 +37,10 @@ server.post('/students.json', function (req, res) {
 });
 
 server.get('/students.json', function (req, res) {
-    res.send(); 
+    // res.send(); 
+    fs.readFile('students.json', function (err, data) {
+        res.end(data);
+    });
 });
 
 var server = server.listen(8888);
