@@ -8,6 +8,10 @@ var FormView = Backbone.View.extend({
 		'click input[type=button]': 'addPerson'
 	},
 
+	initialize: function () {
+		this.render();
+	},
+
 	showForm: function () {
 		$('form').slideToggle(800);
 	},
@@ -20,20 +24,18 @@ var FormView = Backbone.View.extend({
 		});
 
 		var newModel = new StudentModel(newPerson);
+		
+		eventAggregator.trigger('addStd', newModel);
+
 		newModel.save({}, {
-			success: function () {
+			success: function (model) {
 				console.log('ura!');
 			},
 			error: function () {
 				console.log('error!');
 			}
 		});
-		// console.dir(newPerson);
 		$('form').slideToggle(800); 
-	},
-
-	initialize: function () {
-		this.render();
 	},
 
 	render: function () {

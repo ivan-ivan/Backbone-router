@@ -23,9 +23,5 @@ var Router = Backbone.Router.extend({
 				$('.container').append((new RouterView({ model : selectedStudent})).render().el);
 			}
 		});
-		// var selectedStudent = groupView.collection.find(function (student) {
-		// 	return student.get('name') === name;
-		// });
-		// $('body').append((new RouterView({ model : selectedStudent})).render().el);
 	}
 });
